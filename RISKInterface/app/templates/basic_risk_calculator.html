@@ -1,0 +1,96 @@
+{%extends "base_page.html"%}
+{%load static%}
+
+{%block content%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/base_calc.css' %}" />
+<script src="{%static 'scripts/general_calculator.js'%}"></script>
+<div class="content">
+    <div class="about-content">
+
+        <p>The Risk Calculator is a tool designed to assess potential risk levels based on particularly observed weather conditions. Weather qualities (e.g. temperature, relative humidity) are collected, and with that data a severity category is calculated. More extreme conditions lead to higher risk levels.</p>
+        <p id="additional-details">This is the general usage Risk Calculator. Map usage is unavailable. To utilize a particular location's weather data, please refer to the Specific Location calculator.</p>
+
+    </div>
+    <div class="data-input">
+        <div class="calc-options">
+            <div id="add-opt-head">Additional Options</div>
+            <div id="opt">
+                <div id="opt-items">
+                    <button class="add-opt-row" id="basic-btn" type="button">Basic Risk Calculator</button>
+                    <button class="add-opt-row" id="loc-btn" >Specific Location Risk Calculator</button>
+                </div>
+            </div>
+            <div id="add-opt-foot"></div>
+        </div>
+        <form id="RISK-interface">{% csrf_token %}
+            <div class="RISK-title">
+                <center><b>Risk Calculator - Basic</b></center>
+            </div>
+            <div class="RISK-content-container">
+                <div class="RISK-content-item" style="width:50%; display: flex; align-items: center; text-align: center; font-size: 1.1rem;">
+                    <table style="width: 100%; height: 50%;">
+                        <tr>
+                            <td><label for="degreeInput"><b>Temperature (°F):</b></label></td>
+                            <td><input id="degreeInput" name="degreeInput" class="dInput" type="text" onkeypress="checkNumber(event)"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="humidityInput"><b>Relative Humidity (%):</b></label></td>
+                            <td><input id="humidityInput" name="humidityInput" class="dInput" type="text" onkeypress="checkNumber(event)"></td>
+                        </tr>                                
+                        <tr>
+                            <td><label for="windSpeedInput"><b>Wind speed (mph):</b></label></td>
+                            <td><input id="windSpeedInput" name="windSpeedInput" class="dInput" type="text" onkeypress="checkNumber(event)"></td>
+                        </tr>    
+                    </table>
+
+                </div>
+                
+                <div class="RISK-content-item" style=" display:flex; width:50%; align-items:center;">
+                    <div class="stoplight-container">
+                        <div id="stoplight-image"></div>
+                        <div id="risk-level" style="text-align: center; font-weight: bold; font-size: 1.4rem;">Risk Level:</div>
+                    </div>
+                </div>
+            </div>
+            <div class="RISK-buttons" style="width: 40%; margin-bottom: .9rem; display: flex; justify-content: space-around;">
+                <input class='options-btn submit-btn' type="submit" value="CALCULATE">
+                <input class='options-btn clear-btn' type="reset" value="CLEAR">
+            </div>
+
+        </form>
+        <div id="map-container">
+            <div id="map-overlay">Please select a different calculator option to use Maps.</div>
+            <div id="map">Are you using an adblocker? Please disable the extension tempoarially for Google Maps to function.</div>
+
+        </div>
+    </div>
+    <div class="output" style="padding: 0 1rem; display: flex; flex-direction: column;">
+        <div style="font-size:1.1rem; margin-top: 1rem; text-decoration: underline;"><b><center>More Details</center></b></div>
+        <div>
+            <div class="weather-cond-container">
+                    <div class="output-select" id="weather-cond-select">
+                        <img class="dropdown-arrow" src="{%static 'images/right-arrow.png'%}"/>
+                        Weather Conditions    
+                    </div>
+                    <div class="output-paragraph" id="weather-cond-paragraph">
+                        Please perform a valid calculation first!
+                    </div>
+            </div>
+
+            <div class="recc-container" style="margin-bottom: 0.4rem;">
+                    <div class="output-select" id="recc-select">
+                        <img class="dropdown-arrow" src="{%static 'images/right-arrow.png'%}">
+                        Safety Reccomendations
+                    </div>
+                    <div class="output-paragraph" id="recc-paragraph">
+                        Please perform a valid calculation first!
+                    </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+{%endblock%}

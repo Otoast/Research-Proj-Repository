@@ -1,0 +1,56 @@
+#RISK-interface {
+    width:65rem;
+    height:30rem;
+    border: solid black;
+    background-image: url('../images/risk-background2.png');
+    background-repeat : no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.geolocation-btn {
+    background-color: goldenrod;
+    text-decoration: solid;
+    border: 2px solid black;
+    width : 11rem;
+    height: 2rem;
+    border-radius: 0.1rem;
+    color: white;
+    font-style: italic;    
+}
+
+.parameter {
+    font-size : large;
+    border-radius: 0;
+    border: 2px solid black;
+    width: 50%;
+    height: 100%;
+}
+.parameter:hover {
+    background-color: rgb(121, 134, 42); 
+    color: black; 
+    transition-duration: 0.2s;
+    cursor:pointer;
+}
+.parameter_active {
+    background-color: rgb(166, 192, 21);
+    color: black; 
+    transition-duration: 0s;
+}
+
+
+.lat-lon-entry {
+font-size: large;
+}
+.dInput{
+    width: 20%;
+    padding: 2% 3%;
+    margin: 5%;
+}
+.zip-entry {
+    display: none;
+
+}

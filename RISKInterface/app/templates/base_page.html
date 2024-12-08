@@ -1,0 +1,22 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="{% static 'images/logo.png' %}">
+        <div class="navigation-items"> 
+            <a class="navigation-item" href="/">
+                Home
+            </a>
+            <a class="navigation-item" href="basic-calculator">Risk Calculator</a>
+        </div>
+    </header>
+    {%block content%} {%endblock%}
+</body>
+</html>

@@ -1,0 +1,324 @@
+
+
+html {
+    font-family: 'Inter';
+}
+
+.logo {
+    width: 12%;
+    height: 12%;
+    align-self: center;
+    margin-left: 45vw;
+}
+
+.header {
+    background-color: rgb(64, 64, 64);
+    display: flex;
+    padding-bottom: 2px;
+    position: sticky;
+    justify-content: space-between;
+    border-bottom: solid rgb(255, 255, 255);
+    border-width: 5px;    
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+ 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/bg.png");
+    font-family: inherit;
+    background-repeat : no-repeat;
+    background-attachment : fixed;
+    background-size: 100vw 105vh; 
+}
+
+.navigation-item {
+    color: white;
+    padding: inherit;
+    border-radius: 10px;
+    height: inherit;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navigation-item:hover {
+    transition-duration: 0.3s;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: white;
+
+    color:black;  
+}
+
+
+.navigation-items{
+    font-size: 1.0rem;
+    height: 2rem;
+    padding: 3px;
+    margin-top: auto;
+    width: auto;
+    margin-right: 1.3rem;
+}
+
+/* Content Page */
+.dInput {
+    position: inherit;
+    width: 23%;
+    border: 2px solid darkgray;
+    padding: 5% 10%;
+}
+.dInput[type=text]:focus {
+    border: 2px solid black;
+    outline: none;
+    background-color: lightblue;
+    
+}
+
+.data-input {
+    display: flex;
+    justify-content: space-between;
+    width:90vw;
+    margin-left: 5vw;
+
+    flex-direction: row;
+    align-items: center;
+}
+
+.about-content {
+    margin-top: 1.667vw;
+    width: 54.167vw;
+    text-align: justify;
+    margin-left: 14vw;
+    font-size: 0.7rem;
+    font-weight: bold;
+    font-style:italic;
+}
+#RISK-interface {
+    width:65rem;
+    height:30rem;
+    border: solid black;
+    background-image: url('../images/risk-background.png');
+    background-repeat : no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.RISK-content-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.stoplight-container {
+    height: 90%;
+    width: 70%;
+    border: 1px solid white;
+    background-color: rgba(217, 217, 217, 0.4);
+    margin-left: 2rem;
+    
+}
+
+.options-btn {
+    font-weight: 600;
+    border-radius: .3rem;
+    font-family: inherit;
+}
+
+.options-btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: scale(1.05); /* Grows 10% bigger */
+    filter: brightness(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Glows a bit */
+
+}
+.options-btn:active{
+    box-shadow: 0 2px 4px;
+    background-color: white ; /* Even darker shade for pressed effect */
+    color: black; /* Keep font color black */ 
+    transition-duration: 0s;
+}
+.clear-btn {
+    background-color: red;
+    text-decoration: solid;
+    border: 2px solid black;
+    border-radius: 0.1rem;
+    color: white;
+    font-style: italic;    
+    width : 4rem;
+    height: 2rem;
+}
+.submit-btn {
+    background-color: green;
+    text-decoration: solid;
+    border: 2px solid black;
+    width : 6rem;
+    height: 2rem;
+    border-radius: 0.1rem;
+    color: white;
+    font-style: italic;    
+}
+
+.geolocation-btn {
+    background-color: goldenrod;
+    text-decoration: solid;
+    border: 2px solid black;
+    width: 12rem;
+    height: 2rem;
+    border-radius: 0.1rem;
+    color: white;
+    font-style: italic;    
+}
+
+
+
+/* RISK INTERFACE BUTTONS END*/
+#map-container {
+    width : 30rem;
+    height : 20rem;
+    border: solid black;
+}
+#map-overlay {
+    display: flex;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: not-allowed;
+    align-items: center;
+
+
+    font-size: 1rem;
+    color: white;
+
+}
+#map {
+    width : inherit;
+    height : inherit;
+}
+
+.calc-options {
+    width: 9rem;
+    height: 30rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: grey;
+    border-radius : 15px 15px 15px 15px;
+
+}
+#opt{ 
+    height: 80%; 
+    display: flex;
+    align-items: center;
+}
+#opt-items {
+   margin-bottom: 4rem;
+}
+
+.add-opt-row {
+    border : 1px solid black;
+    width: inherit;
+    height : 4rem;
+    color: inherit;
+    font-weight: bolder;
+    background-color: rgb(48, 48, 160);
+    margin: auto;
+    font-family: inherit;
+}
+.add-opt-row:hover {
+    background-color: rgb(192, 79, 21); /* Darker shade of the original background color */
+    color: black; /* Change font color to black */   
+    transition-duration: 0.2s;
+    cursor:pointer;
+}
+
+.add-opt-row:active {
+    box-shadow: 0 2px 4px;
+    background-color: white; /* Even darker shade for pressed effect */
+    color: black; /* Keep font color black */
+    transition-duration: 0s;
+}
+#add-opt-head {
+    display: grid;
+    place-items: center;
+    position: relative;
+    border : 1px solid black;
+    height: 10%;
+    background-color: rgb(61, 61, 61);
+    padding: .09rem;
+    font-weight: bold;
+}
+#add-opt-foot {
+    position: relative;
+    border : 1px solid black;
+    border-radius : 0px 0px 15px 15px;
+    height: 10%;
+    background-color:  rgb(61, 61, 61);
+    
+}
+/* Content Page END */
+
+/* Output */
+.output {
+    border: 1px solid black;
+    width:90vw;
+    align-self: center;
+    margin-left: 5vw;
+    margin-top: 1.667vw;
+}
+
+
+
+.output-select {
+    padding: 0.6rem 0 0.6rem 0;
+    font-weight: bold;
+    font-style :italic;
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+.output-select:hover{
+    cursor: pointer;
+    background-color: rgba(153, 193, 238, 0.6);
+    transition: 0.3s ease;
+}
+.output-paragraph {
+    opacity: 0;
+    max-height: 0;
+    color: transparent;
+    visibility: hidden;
+    transition: all 0.2s ease, opacity 0.03s ease;
+}
+.output-paragraph.visible {
+    transition: all 0.3s ease, opacity 0.5s ease, max-height 0.4s ease;
+    opacity: 1;
+    color: inherit;
+    max-height: fit-content;
+    visibility: visible;
+    margin: 0.1rem 0 0.1rem;
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    border: 1px solid rgba(247, 243, 243, 0.7);
+    font-size: 1rem;
+}
+
+.dropdown-arrow {
+    width: 0.8rem;
+    height: 0.8rem;
+    transition: 0.2s ease;
+    transform: rotate(0deg);
+}
+.dropdown-arrow.rotate {
+    transform: 0.2s ease;
+    transform: rotate(90deg);
+}
+
+#stoplight-image {
+    height: 75%;
+    background-size: auto 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/traffic_light.png);
+}

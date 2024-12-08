@@ -1,0 +1,11 @@
+ninja
+opencv-python-headless==4.10.0.84
+onnx==1.17.0
+ultralytics==8.3.30
+tqdm==4.65.2
+--find-links https://download.pytorch.org/whl/cu118/torch_stable.html
+torch==2.0.1+cu118 
+torchvision==0.15.2+cu118 
+torchaudio==2.0.2+cu118
+openmim
+onnxruntime-gpu==1.13.1
